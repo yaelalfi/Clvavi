@@ -1,0 +1,836 @@
+﻿/*פונטים*/
+@font-face {
+    font-family: 'Rubik-Bold';
+    src: url('../Rubik/static/Rubik-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-Light';
+    src: url('../Rubik/static/Rubik-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-Medium';
+    src: url('../Rubik/static/Rubik-Medium.ttf') format('truetype');
+}
+
+/*בסיסי*/
+body {
+    direction: rtl;
+    font-size: 16pt;
+    overflow-x:hidden; /*מגדיר את ההזזה מימין לשמאל כך שהעמוד  לא יחתך*/
+    font-family: Rubik-Medium;
+}
+#container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#responsive {
+    position: relative;
+}
+
+/*מזהה לעמודים שלא פותחו*/
+.notActive {
+    cursor: not-allowed;
+}
+.default { /*העכבר יופיע כברירת מחדל- לא לחיץ*/
+    cursor: default;
+}
+
+/*תפריט ניווט לוגו בתוך התפריט*/
+#homeLogo {
+    width: 120px;
+    margin-top: -20px;
+}
+
+#headerNav {
+    position: fixed; /*נשאר באותו מקום גם אם הדף גולל.*/
+    width: 1280px;
+    top: 0px;
+    z-index: 40;
+}
+
+nav ul { /*העלמת תבליטים*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li a { /*תפריט אופקי*/
+    display: inline-block;
+    float: right;
+}
+
+#headerNav ul li a { /*העיצוב עצמו*/
+    display: block;
+    color: black;
+    width: 200px;
+    height: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 22px;
+    font-size: 16pt;
+    font-family: Rubik-Light;
+    background-color: white;
+}
+
+/*עמוד פנימי לחוץ*/
+#headerNav ul li .BoldBrown {
+    color: #a66832;
+    font-family: Rubik-Medium;
+}
+
+#headerNav ul li .secondNavStains { /*התפריט שנפתח מהלייף סטייל*/
+        text-align: center;
+        padding: 10px 40px;
+        width: 170px; /*לסדר את המרווחים מלמעלה למטה בתוך הריבועים*/
+}
+
+#headerNav ul li .secondNavStainsbold { /*התפריט הפנימי שנפתח בעמוד הלחוץ*/
+    text-align: center;
+    color: #a66832;
+    font-family: Rubik-Medium;
+    padding: 10px 40px;
+    width: 170px; /*לסדר את המרווחים מלמעלה למטה בתוך הריבועים*/
+}
+
+#headerNav ul li a:hover { /*מעבר עכבר משנה צבע לכתב*/
+    position: relative; /*מיקום יחסי*/
+    color: #a66832;
+    font-family: Rubik-Medium;
+}
+
+/*/עיצוב רשימה/*/
+ul li {
+    list-style: none;
+    font-weight: normal;
+}
+
+/*שלא יהיה קו מתחת לטקסט בתפריט ניווט*/
+a {
+    text-decoration: none;
+    color:black;
+}
+
+/*הגדרות של תת תפריט*/
+#headerNav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(242, 242, 242, 0.3);
+}
+
+/*הגדרות של מעבר עכבר*/
+#headerNav ul li:hover ul {
+    display: block;
+    right: 175px;
+    height: -20px;
+    top: 62px;
+    box-shadow: 0px 16px 13px -1px rgba(0,0,0,0.12);
+}
+
+/*עיצוב תפריט פירורי לחם*/
+#breadCrumbs {
+    position: absolute;
+    top: 150px;
+}
+
+    #breadCrumbs ol li {
+        display: inline-block;
+        font-size: 12pt;
+        font-family: Rubik-Light;
+    }
+
+        #breadCrumbs ol li a {
+            color: #272727;
+        }
+
+        #breadCrumbs ol li:after {
+            content: ">";
+        }
+
+        #breadCrumbs ol li:last-child:after {
+            content: "";
+        }
+
+        #breadCrumbs ol li:last-child {
+            color: #a66832;
+            font-family: Rubik-Medium;
+        }
+
+/*על מנת שנוכל לראות את ה div מעל תמונת הרקע*/
+.front {
+    z-index: 4;
+}
+
+/*כותרות*/
+/*כותרת כלבבי*/
+.homepage {
+    font-size: 30pt;
+    text-align: center;
+    line-height: 100%; /*מרווח בין השורות*/
+    font-weight: normal;
+    font-family: Rubik-Bold;
+    color: #a66832;
+    margin-top: 10px;
+}
+
+/*מיקום הכותרות בדף הבית במרכז העמוד*/
+#centerFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*המילה כלבבי שתהייה גדולה יותר*/
+#FrontName {
+    font-size: 45pt;
+}
+
+/*כותרת משנית בדף בית*/
+.homepage2 {
+    font-size: 18pt;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 5px;
+    line-height: 130%;
+    font-family: Rubik-Medium;
+    color: #403501;
+}
+
+/*כותרת ראשית לכלל העמודים*/
+h1
+{
+    font-size: 30pt;
+    text-align: right;
+    font-weight: normal;
+    font-family: Rubik-Bold;
+    color: #a66832;
+    margin-top: 250px;
+    margin-right: 37px;
+}
+
+/*כותרת משנית לכלל העמודים*/
+h2 {
+    font-size: 18pt;
+    line-height: 20%;
+    text-align: right;
+    font-weight: normal;
+    font-family: Rubik-Medium;
+    color: #403501;
+    margin-right: 37px;
+}
+
+/*הגדרת פסקה*/
+p {
+    margin-right: 37px;
+    font-family:Rubik-Light;
+    font-size:18px;
+}
+
+/*מיקום המלל באמצע עמודים פנימיים שיער*/
+.centerhair {
+    margin: auto;
+    width: 40%;
+    padding-top: 90px;
+}
+/*הגדרות נראות כתב דף בית*/
+div div div section p {
+    font-family: Rubik-Medium;
+    font-size: 16px;
+    color: #a66832;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+/*מיקומים של מלל על התמונה בדף בית*/
+
+
+/*גיפים דף בית*/
+/*גיף ראשי*/
+#pawsGif {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    transform: rotate(180deg); /*היפוך הגיף*/
+    z-index : 0;
+}
+
+
+/*הגדרות עיצוב פוטר כללי*/
+footer {
+    margin-top: 700px;
+    background-color: #f2c849;
+    height: 150px;
+    background-color: #f2c849;
+    border-bottom: 30px solid;
+    border-bottom-color: rgb(41,47,51);
+    z-index: 5;
+    font-size:14px;
+}
+
+footer div section ul li{
+    font-family:Rubik-Light;
+    font-size:14px;
+}
+
+/*עיצוב רשימה*/
+div section ul li {
+    font-size: 16pt;
+    font-family: Rubik-Light;
+    list-style-type: none;
+}
+
+.orderFlex {
+    display: flex; /*האלמנט יתייחס לאלמנטים שלידו*/
+    flex-grow: 2;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.bold {
+    font-size: 14px;
+    font-family: Rubik-Medium;
+    font-weight: bold;
+}
+
+/*מיקום פוטר עמוד בית*/
+#mainfooter {
+    margin-top: -10px;
+}
+
+/*הגדרות מיקום פוטר עמוד פנימי טיפוח*/
+#haircutmainfooter {
+    margin-top: 600px;
+}
+
+/*עמודים פנימיים סוגי פרוות מיקום פוטר*/
+.haircutfooter {
+    margin-top: 350px;
+}
+
+/*פוטר מפת אתר*/
+#sitefooter {
+    margin-top: 200px;
+}
+
+#aboutfooter {
+    margin-top: 20px;
+}
+
+#footercontact {
+    margin-top: 250px;
+}
+
+/*עמודים פנימיים פרעושים קרציות מיקום פוטר*/
+.tickfooter {
+    margin-top: 240px;
+}
+
+/*מיקום פסקאות עמודים פנימיים פרעושים קרציות*/
+.tickdown1 {
+    margin-top: 120px;
+}
+.tickdown2 {
+    margin-top: 50px;
+}
+
+
+/*תמונות רקע*/
+
+#backHomepage {
+    width: 100%;
+    background-image: url('../project/backMain.png');
+    z-index: -5;
+    margin-top: -90px;
+}
+
+#haircutBack {
+    position:absolute;
+    background-image: url('../הכנה ליפתוח/backHair.png');
+    z-index: -1;
+    width: 1280px;
+    height: 850px;
+}
+
+/*תמונות רקע טיפוח תספורת*/
+.pic {
+    position: absolute;
+    margin-top: -15px;
+    z-index: -1;
+    width: 1280px;
+    height: 920px;
+}
+/*תמונות רקע פרעושים קרציות*/
+.pictick {
+    position: absolute;
+    margin-top: -130px;
+    z-index: -1;
+    width: 1280px;
+    height: 920px;
+}
+/*תמונת רקע עמוד פנימי פרעושים*/
+#backtick {
+    background-image: url('../project/backTick.png');
+    position: absolute;
+    margin-top: -130px;
+    z-index: -1;
+    width: 1280px;
+    height: 920px;
+}
+
+#backabout {
+    margin-top: -170px;
+    background-image: url('../project/backabout.png');
+    z-index: -1;
+    position: absolute;
+    width: 1280px;
+    height: 920px;
+}
+
+#backmap {
+    margin-top: 80px;
+    background-image: url('../project/backmap.png');
+    z-index: -7;
+    position: relative;
+    width: 1280px;
+    height: 920px;
+}
+
+#upmap {
+    margin-top: -900px;
+}
+
+#backcontact {
+    margin-top: 150px;
+    background-image: url('../project/backcontact.png');
+    z-index: -7;
+    position: relative;
+    width: 1280px;
+    height: 920px;
+}
+/*כפתורים*/
+/*כפתורים עמוד פנימי שיער*/
+#HairButton {
+    width: 1000px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+/*הגדרות של כפתורים ומעבר עליהם*/
+.button1 {
+    background-color: #f2D06b;
+    border: solid;
+    border-color: #F2C849;
+    border-radius: 25px;
+    color: black;
+    padding: 15px 32px;
+    padding:0;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Rubik-Medium;
+    cursor: pointer;
+    width: 160px;
+    height: 50px;
+    box-shadow: 0px 4px 8px rgba(166, 104, 50, 0.7);
+}
+    .button1:hover {
+        background-color: #8fd9d1;
+        border-color: #79bed9;
+        box-shadow: 0px 4px 8px rgba(121, 190, 217, 0.7);
+        font-size: 18px;
+        padding: 20px 32px;
+        font-family: Rubik;
+        padding: 0;
+    }
+
+.button2 {
+    border: solid;
+    border-radius: 25px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    background-color: #8fd9d1;
+    border-color: #79bed9;
+    box-shadow: 0px 4px 8px rgba(121, 190, 217, 0.7);
+    font-size: 18px;
+    padding: 20px 32px;
+    font-family: Rubik;
+    padding: 0;
+}
+
+.button3 {
+    background-color: #f2D06b;
+    border: solid;
+    border-color: #F2C849;
+    border-radius: 25px;
+    color: black;
+    padding: 0px 32px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-family: Rubik-Medium;
+    cursor: pointer;
+    width: 285px;
+    height: 40px;
+    box-shadow: 0px 4px 8px rgba(166, 104, 50, 0.7);
+    margin-top: 10px;
+    margin-right: -105px;
+}
+.button3:hover {
+    background-color: #8fd9d1;
+    border-color: #79bed9;
+    box-shadow: 0px 4px 8px rgba(121, 190, 217, 0.7);
+    font-size: 18px;
+    padding: 20px 32px;
+    font-family: Rubik;
+    padding: 0;
+    }
+.button4 {
+    border: solid;
+    border-radius: 25px;
+    color: black;
+    padding: 0px 37px;
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    font-family: Rubik;
+    cursor: pointer;
+    width: 285px;
+    height: 40px;
+    box-shadow: 0px 4px 8px rgba(166, 104, 50, 0.7);
+    margin-top: 10px;
+    margin-right: -105px;
+    background-color: #8fd9d1;
+    border-color: #79bed9;
+    box-shadow: 0px 4px 8px rgba(121, 190, 217, 0.7);
+    padding:0;
+}
+
+.button5 {
+    background-color: #f2D06b;
+    border: solid;
+    border-color: #F2C849;
+    border-radius: 25px;
+    color: black;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    display: block;
+    font-size: 12px;
+    font-family: Rubik-Medium;
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    box-shadow: 0px 4px 8px rgba(166, 104, 50, 0.7);
+    margin-right: 650px;
+    z-index: 3;
+}
+.button5:hover {
+    cursor: not-allowed;
+    background-color: #8fd9d1;
+    border-color: #79bed9;
+    box-shadow: 0px 4px 8px rgba(121, 190, 217, 0.7);
+    font-size: 14px;
+    padding: 0;
+    font-family: Rubik;
+    }
+
+.button6 {
+    background-color: #f2D06b;
+    border: solid;
+    border-color: #F2C849;
+    border-radius: 25px;
+    color: black;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    display: block;
+    font-size: 12px;
+    font-family: Rubik-Medium;
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    box-shadow: 0px 4px 8px rgba(166, 104, 50, 0.7);
+    margin-right: 650px;
+    z-index: 3;
+}
+.button6:hover {
+    background-color: #8fd9d1;
+    border-color: #79bed9;
+    box-shadow: 0px 4px 8px rgba(121, 190, 217, 0.7);
+    font-size: 14px;
+    padding: 0;
+    font-family: Rubik;
+    }
+
+/*כפתורים פרעושים קרציות*/
+/*ה div שבו נמצאים הכפתורים הקטנים פרעושים קרציות*/
+.Flexbtn {
+    display: flex; /*האלמנט יתייחס לאלמנטים שלידו*/
+    flex-direction: row;
+    flex-grow: 2;
+    justify-content: flex-start;
+    align-content: space-between;
+    margin-right: 37px;
+    position: relative;
+    z-index: 2;
+}
+/*מעבר על הכפתור שהוא תמונה*/
+.above:hover {
+    filter: hue-rotate(140deg);
+    opacity: 0.6;
+}
+
+.Flexbtn .up {
+    z-index: 4;
+    margin-top: -75px;
+    font-family: Rubik;
+    font-size: 16px;
+}
+
+/*התנהגות כפתורים שהם כתמים*/
+.texthover {
+    display: none;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 16px;
+    margin-right: -20px;
+}
+
+.above:hover ~ .texthover {
+    display: block;
+    width: 180px;
+}
+.arr {
+    width: 150%;
+    align-items: center;
+    margin-right: -10px;
+    margin-top: 20px;
+}
+
+/*כפתור ראשי בואו נצא לדרך*/
+#homeButton {
+    width: 100px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.homeButton {
+    background-color: #f2D06b;
+    border: solid;
+    border-color: #F2C849;
+    border-radius: 25px;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    font-family: Rubik-Medium;
+    cursor: pointer;
+    width: 160px;
+    height: 50px;
+    box-shadow: 0px 4px 8px rgba(166, 104, 50, 0.7);
+}
+.homeButton:hover {
+    background-color: #8fd9d1;
+    border-color: #79bed9;
+    box-shadow: 0px 4px 8px rgba(121, 190, 217, 0.7);
+    cursor:not-allowed;
+    
+    }
+
+#mainpaw {
+    width: 100px;
+    transform: rotate(180deg);
+    margin-top:10px;
+    margin-right:30px;
+}
+
+/*תמונות עמוד אודות*/
+.photo {
+    width: 150px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin-right: 15px;
+}
+.squarePhoto {
+    position: relative;
+    max-width: 170px;
+    margin: 0 auto;
+    display: inline-block;
+    margin-right: 13px;
+    margin-top: 20px;
+}
+/*הכתב על התמונות*/
+.squarePhoto span {
+    position: absolute;
+    bottom: 5px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 130px;
+    padding: 10px;
+    margin-right: 21px;
+    text-align: center;
+}
+
+/*קישור ללוגו הפקולטה*/
+section a img {
+    width: 120px;
+}
+#HIT {
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+#HIT a{
+    color:blue;
+}
+#bult section ul li {
+    list-style-type: disc;
+    font-family: Rubik-Medium;
+    font-size: 16px;
+    color: black;
+}
+#bult section p {
+    font-size: 18px;
+    text-align: right;
+}
+/*דף צור קשר*/
+#sent {
+    position: relative;
+    margin-right: 110px;
+}
+/*הגדרות הטופס*/
+#right {
+    position: relative;
+    margin-right:20px;
+}
+#left {
+    position: relative;
+    margin-right:400px;
+    margin-top:-380px;
+}
+#oncontact{
+    z-index:7;
+    margin-top:-1100px;
+}
+
+/*הגדרות מפת האתר*/
+.boldS {
+    font-family: Rubik;
+}
+
+/*מיקומים גיפים ותמונות בדף בית*/
+div div div section #eatimg {
+    margin-top: -3000px;
+    position: relative;
+    margin-right: -25px;
+}
+.gifsize {
+    height: 40%;
+    width: 40%;
+}
+.sizeimgdog {
+    height: 30%;
+    width: 30%;
+    margin-top: 100px;
+    margin-right: 800px;
+    position: relative;
+}
+#endp{
+    width:350px;
+}
+#endimg {
+    margin-top: 300px;
+    margin-right: 230px;
+}
+div div div section #eat {
+    margin-top: -300px;
+    margin-right: 100px;
+}
+
+div div div section #dochome {
+    position: relative;
+    margin-right: -100px;
+    margin-top: 300px;
+}
+
+div div div section .dcpgif {
+    width: 70%;
+    height: 70%;
+}
+
+div div div section #doctor {
+    margin-top: -420px;
+    margin-right: 100px;
+}
+
+div div div section #travelhome {
+    position: relative;
+    margin-top: 200px;
+    margin-right: 500px;
+}
+
+div div div section #lifestylehome {
+    position: relative;
+    margin-top: 350px;
+    margin-right: 200px;
+}
+
+div div div section #love {
+    position: relative;
+    margin-top: -450px;
+    margin-right: 200px;
+}
+
+#trv {
+    width: 1000px;
+}
+
+div div div section #sleep {
+    margin-top: -300px;
+    margin-right: 100px;
+}
+
+div div div section #travel {
+    margin-top: -400px;
+    margin-right: 100px;
+}
+
+div div div section #Lstyle {
+    margin-top: -470px;
+    margin-right: 100px;
+}
+
+div div div section #lovehome {
+    margin-top: 400px;
+    margin-right: 350px;
+}
+/*נגישות*/
+.screenreader-text {
+    position: absolute;
+    overflow: hidden;
+    left: -100px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    z-index: 999;
+}
+    /*נגישות פתיחה של טאב פוקוס*/
+    .screenreader-text:focus {
+        color: black;
+        top: 0;
+        background-color: #8fd9d1;
+        display: inline-block;
+        overflow: visible;
+        height: auto;
+        width: auto;
+        position: static;
+        margin-top: 80px;
+        z-index: 999;
+    }

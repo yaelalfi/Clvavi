@@ -1,0 +1,225 @@
+﻿
+<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8">
+    <title> כלבבי - צור קשר</title>
+    <meta name="description" content=" עמוד צור קשר אתר כלבבי" />
+    <meta name="keywords" content="צור קשר" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <link rel="icon" href="project/favicon.png" />
+</head>
+<body>
+
+    <div id="container">
+        <header>
+            <img id="backcontact" src="project/backcontact.png" alt="" />
+            <a id='skip-nav' class='screenreader-text' href='#main-content'>
+                דלג לתוכן העמוד
+            </a>
+            <nav id="headerNav" aria-label="תפריט ניווט ראשי" role="navigation">
+
+                <ul>
+                    <li>
+                        <a href="index.html">
+
+                            <img id="homeLogo" src="project/logo.png" alt="כלבבי - המדריך לכלב הראשון שלי" title="כלבבי - המדריך לכלב הראשון שלי">
+                        </a>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#" class="navLine default">לייף סטייל</a>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="haircut.html" class="secondNavStains">טיפוח ותספורת</a>
+                            </li>
+
+                            <li><a href="tick.html" class="secondNavStains">פרעושים וקרציות</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#" class="notActive navLine">בריאות</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#" class="notActive navLine">אילוף והתנהגות</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#" class="notActive navLine">מזון</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#" class="notActive navLine">טיפים</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+            <nav id="breadCrumbs" aria-label="תפריט התמצאות" role="navigation">
+                <ol>
+                    <li>
+                        <a href="index.html">דף הבית</a>
+                    </li>
+
+                    <li>
+                        צור קשר
+                    </li>
+                </ol>
+            </nav>
+        </header>
+        <main role="main" id="main-content">
+            <div id="container">
+                <div id="oncontact">
+                    <h1>צור קשר</h1>
+                    <form>
+                        <input type="hidden" id="myEmail" name="svata" value="svetagerman24121996@gmail.com">
+                        <div id="right">
+                            <label for="firstName">
+                                *שם פרטי: <br>
+                            </label>
+                            <input id="firstName" type="text" name="שם פרטי" required aria-invalid="true" aria-describedby="nameLastnameError">
+
+                            <br /><br />
+                            <label for="lastName">
+                                *שם משפחה:  <br>
+                            </label>
+                            <input id="lastName" type="text" name="שם משפחה" required aria-invalid="true" aria-describedby="nameLastnameError">
+
+                            <br /><br />
+                            <div id="nameLastnameError" role="alert"></div>
+
+
+                            <label for="gender">
+                                מגדר: <br>
+                            </label>
+                            זכר  <input id="gender" type="radio" name="gender">
+                            נקבה <input id="gender" type="radio" name="gender">
+
+                            <br /><br />
+
+                            <label for="email">
+                                *דואר אלקטרוני:  <br>
+                            </label>
+                            <input id="email" type="email" name="כתובת דואר אלקטרוני" required aria-invalid="true" aria-describedby="emailError">
+
+                            <br /><br />
+                            <div id="emailError" role="alert"></div>
+
+
+                            <label for="phoneNumber">
+                                *טלפון נייד:  <br>
+                            </label>
+                            <input id="phoneNumber" type="number" name="מספר טלפון" required aria-invalid="true" aria-describedby="numberError">
+
+                            <br /><br />
+                            <div id="numberError" role="alert"></div>
+
+                        </div>
+
+                        <div id="left">
+                            <label for="topic">
+                                *נושא הפניה: <br>
+                            </label>
+                            <input id="topic" type="text" name="נושא" required aria-invalid="true" aria-describedby="subjectError">
+
+                            <br /><br />
+                            <div id="subjectError" role="alert"></div>
+
+                            <label for="topic">
+                                <br><br>
+                                תוכן: <br>
+                            </label>
+                            <textarea name="השאר את פנייתך כאן" rows="10" required aria-invalid="false"> </textarea>
+
+                            <br><br>
+
+                            <label for="sent"></label>
+                            <input id="sent" type="submit" value="לשליחה">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footercontact">
+            <div class="orderFlex">
+                <section>
+                    <ul>
+                        <li class="bold"><a href="index.html">דף בית</a></li>
+                    </ul>
+                </section>
+
+                <section>
+
+                    <ul>
+                        לייף סטייל
+                        <li><a href="haircut.html">טיפוח ותספורת</a></li>
+                        <li><a href="tick.html">פרעושים וקרציות</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        בריאות
+                        <li><a class="notActive" href="#">שגרת טיפוח</a></li>
+                        <li><a class="notActive" href="#">חיסונים</a></li>
+                        <li><a class="notActive" href="#">עיקור וסירוס</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        אילוף והתנהגות
+                        <li><a class="notActive" href="#">פקודות בסיסיות</a></li>
+                        <li><a class="notActive" href="#">נשכנות גורים</a></li>
+                        <li><a class="notActive" href="#">חינוך לצרכים</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        מזון
+                        <li><a class="notActive" href="#">גורים</a></li>
+                        <li><a class="notActive" href="#">בוגרים</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        טיפים
+                        <li><a class="notActive" href="#">איך לבחור שם לכלב</a></li>
+                        <li><a class="notActive" href="#">ציוד מומלץ</a></li>
+                        <li><a class="notActive" href="#">טיול עם הכלב</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="bold"><a href="contactUs.html">צור-קשר</a></li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="bold"> <a href="about.html">אודות</a></li>
+                        <li class="bold"><a href="sitemap.html">מפת האתר</a></li>
+                    </ul>
+
+                </section>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
